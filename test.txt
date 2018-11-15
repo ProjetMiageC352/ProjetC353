@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ca marche 
+=======
+ça marche
+>>>>>>> branch 'master' of https://github.com/ProjetMiageC352/ProjetC353.git
