@@ -1,7 +1,7 @@
 //package ;
 
 /**
- * Classe Banque
+ * Classe Banque.
  */
 public class Banque {
 
@@ -59,7 +59,7 @@ public class Banque {
 	/* **************************** */
 
     /**
-     * Getter de l'd.
+     * Getter de l'id.
      *
      * @return id
      */
