@@ -25,10 +25,15 @@ public class Compte {
 	 * Solde du compte.
 	 */
 	protected double solde = 0;
+
 	/**
 	 * Banque qui gère le compte.
 	 */
 	protected Banque banque = new Banque();
+	/**
+	 * Propriétaire du compte.
+	 */
+	//protected Client = new Client();
 	
 	/* **************************** */
 	/*         CONSTRUCTEURS        */
