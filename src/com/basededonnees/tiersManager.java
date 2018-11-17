@@ -5,6 +5,7 @@ package com.basededonnees;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
@@ -19,47 +20,26 @@ import com.beans.tiers;
 public class tiersManager {
 	private Connection connexion; 
 	
-	public void creerTiers() {
-		tiers Tiers = new tiers();
-		java.sql.PreparedStatement prepare = null;
-		int id=Tiers.getIdT();
-		String nom=Tiers.getNom();
-		String prenom=Tiers.getPrenom();
-		int numCompte=Tiers.getNumCompte();
-		boolean actif=Tiers.isActif();
-		
+	public void creerTiers(tiers Tiers) {
 		
 	/**
 	 * connexion à la base avec la fonction loadDatabase       
 	 */
 	    loadDatabase();
-	    
-try {
-        	
-    
-            /**
-             * Exécution de la requête
-             */
-     	prepare = connexion.prepareStatement("INSERT INTO tiers (t_id,t_nom,t_prenom,t_num_compte,t_actif) VALUE ('"+id+"','"+nom+"','"+prenom+"','"+numCompte+"','"+actif+"';");
-
-          
+	    try {
+	    	PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO tiers (t_nom,t_prenom,t_num_compte,t_actif) VALUES(?, ?, ?, ?);");
+            preparedStatement.setString(1, Tiers.getNom());
+            preparedStatement.setString(2, Tiers.getPrenom());
+            preparedStatement.setInt(3, Tiers.getNumCompte());
+            preparedStatement.setBoolean(4, Tiers.isActif());
             
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
-        } finally {
-           /**
-            *  Fermeture de la connexion
-            */
-            try {
-                if (prepare != null)
-                	prepare.close();
-                if (connexion != null)
-                    connexion.close();
-            } catch (SQLException ignore) {
-            }
+            e.printStackTrace();
         }
-        
-      
-	}    
+	}	    
+	    
+ 
 	private void loadDatabase() {
   	  
 	       /**
