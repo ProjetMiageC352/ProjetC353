@@ -31,6 +31,7 @@ public class tiers extends client {
      * Default constructor
      */
     public tiers() {
+    	
     }
 
     /**
@@ -41,11 +42,13 @@ public class tiers extends client {
      * @param numCompteT
      * @param actifT
      */
-    public tiers(final int id_T,final int numCompteT, final boolean actifT) {
-    	this.idT=id_T;
+    public tiers(String nom,String prenom,final int numCompteT, final boolean actifT) {
+    	super(nom,prenom);
     	this.numCompte=numCompteT;
     	this.actif=actifT;
     }
+    
+   
     
 	
 	/* **************************** */
