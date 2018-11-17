@@ -41,7 +41,7 @@ public class clientManager {
             /**
              * Exécution de la requête
              */
-            resultat = statement.executeQuery("SELECT c_nom, c_prenom,c_adresse_mail,c_type_client FROM CLIENT;");
+            resultat = statement.executeQuery("SELECT c_nom, c_prenom,c_adresse_mail,c_type_client FROM client;");
 
            /**
             *  Récupération des données
