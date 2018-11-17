@@ -1,4 +1,4 @@
-//package ;
+package com.beans;
 
 /**
  * Classe Compte.
@@ -33,6 +33,7 @@ public class Compte {
 	/**
 	 * Propriétaire du compte.
 	 */
+	//TODO
 	//protected Client = new Client();
 	
 	/* **************************** */
@@ -50,7 +51,7 @@ public class Compte {
      * @param typeC Type de compte
      * @param decouvertC Découvert autorisé pour le compte
      * @param soldeC Solde du compte
-     * @param banqueC Banque qui gère le compt
+     * @param banqueC Banque qui gère le compte
      */
     public Compte(final String typeC, final boolean decouvertC,
     		final double soldeC, final Banque banqueC) {
@@ -66,7 +67,7 @@ public class Compte {
      * @param typeC Type de compte
      * @param decouvertC Découvert autorisé pour le compte
      * @param soldeC Solde du compte
-     * @param banqueC Banque qui gère le compt
+     * @param banqueC Banque qui gère le compte
      */
     public Compte(final int idC, final String typeC, final boolean decouvertC,
     		final double soldeC, final Banque banqueC) {
@@ -157,6 +158,14 @@ public class Compte {
      */
     public final void setSolde(final double soldeC) {
         this.solde = soldeC;
+    }
+    /**
+     * Setter de la banque.
+     *
+     * @param banqueC Nouvelle banque
+     */
+    public final void setBanque(final Banque banqueC) {
+        this.banque = banqueC;
     }
     
     /* **************************** */
