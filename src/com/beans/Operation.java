@@ -78,6 +78,30 @@ public class Operation {
     public final int getId() {
         return id;
     }
+    /**
+     * Getter de la date.
+     *
+     * @return date
+     */
+    public final Date getDate() {
+        return date;
+    }
+    /**
+     * Getter du montant.
+     *
+     * @return montant
+     */
+    public final double getMontant() {
+        return montant;
+    }
+    /**
+     * Getter du type.
+     *
+     * @return type
+     */
+    public final String getType() {
+        return type;
+    }
     
     /* **************************** */
    	/*            SETTERS           */
@@ -90,6 +114,30 @@ public class Operation {
      */
     public final void setId(final int idC) {
         this.id = idC;
+    }
+    /**
+     * Setter de la date.
+     *
+     * @param dateO Nouvelle date de l'opération
+     */
+    public final void setDate(final Date dateO) {
+        this.date = dateO;
+    }
+    /**
+     * Setter du montant.
+     *
+     * @param montantO Nouveau montant
+     */
+    public final void setMontant(final double montantO) {
+        this.montant = montantO;
+    }
+    /**
+     * Setter du type.
+     *
+     * @param typeO Nouveau type
+     */
+    public final void setType(final String typeO) {
+        this.type = typeO;
     }
 
 	/* **************************** */
