@@ -41,6 +41,20 @@ public class client {
 	/**
      * Constructeur de la classe.
      */
+	
+	/**
+	 * @param nomT
+	 * @param prenomT
+	 */
+	public client(String nomT,String prenomT) {
+		this.nom=nomT;
+		this.prenom=prenomT;
+	}
+	
+	
+	/**
+     * Constructeur de la classe.
+     */
 	/**
 	 * @param idC
 	 * @param nomC
