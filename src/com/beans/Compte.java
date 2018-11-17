@@ -8,7 +8,7 @@ public class Compte {
 	/* **************************** */
 	/*           ATTRIBUTS          */
 	/* **************************** */
-	
+
 	/**
 	 * Id du compte / numéro de compte.
 	 */
