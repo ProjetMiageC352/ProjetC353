@@ -59,7 +59,7 @@ public class Banque {
 	/* **************************** */
 
     /**
-     * Getter de l'd.
+     * Getter de l'id.
      *
      * @return id
      */
