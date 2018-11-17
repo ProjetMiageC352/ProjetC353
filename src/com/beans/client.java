@@ -6,54 +6,139 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
-
+/** 
+ * Classe client
+ */
 
 public class client {
-	public String c_nom;
-	public String c_prenom;
-	public String c_adresse_mail;
-	public String c_type_client;
-	private Connection connexion;
-
-
-//retourne le nom d'un client	
-    public String getC_nom() {
-		return c_nom;
+	
+	/**
+	 * Id du client
+	 */
+	protected int id;
+	/** 
+	 * Nom du client
+	 */
+	protected String nom;
+	/**
+	 * Prenom du client
+	 */
+	protected String prenom;
+	/**
+	 * Adresse Mail du client
+	 */
+	protected String adresse_mail;
+	/**
+	 * Type du client
+	 */
+	protected String type_client;
+	
+	
+	/* **************************** */
+	/*         CONSTRUCTEURS        */
+	/* **************************** */
+	
+	/**
+     * Constructeur par défaut de la classe.
+     */
+	public client() {
+	}
+	
+	/**
+     * Constructeur de la classe.
+     */
+	/**
+	 * @param idC
+	 * @param nomC
+	 * @param prenomC
+	 * @param adresseC
+	 * @param typeC
+	 */
+	public client(final int idC,final String nomC, final String prenomC,final String adresseC, final String typeC) {
+		this.id=idC;
+		this.nom=nomC;
+		this.prenom=prenomC;
+		this.adresse_mail=adresseC;
+		this.type_client=typeC;
+	}
+	
+	/* **************************** */
+	/*            GETTERS           */
+	/* **************************** */
+	
+	/**
+	 * @return the id
+	 */
+	public final int getId() {
+		return id;
 	}
 
-//ajoute le nom d'un client	
-	public void setC_nom(String c_nom) {
-		this.c_nom = c_nom;
+	/**
+	 * @return the nom
+	 */
+	public final String getNom() {
+		return nom;
 	}
 
-//retourne le prenom d'un client	
-	public String getC_prenom() {
-		return c_prenom;
+	/**
+	 * @return the prenom
+	 */
+	public final String getPrenom() {
+		return prenom;
 	}
 
-//ajoute le prenom d'un client		
-	public void setC_prenom(String c_prenom) {
-		this.c_prenom = c_prenom;
+	/**
+	 * @return the adresse_mail
+	 */
+	public final String getAdresse_mail() {
+		return adresse_mail;
 	}
 
-//retourne l'adresse d'un client	
-	public String getC_adresse_mail() {
-		return c_adresse_mail;
+	/**
+	 * @return the type_client
+	 */
+	public final String getType_client() {
+		return type_client;
+	}
+	
+
+	/* **************************** */
+	/*            SETTERS           */
+	/* **************************** */
+	
+	/**
+	 * @param id the id to set
+	 */
+	public final void setId(int id) {
+		this.id = id;
 	}
 
-//ajoute l'adresse d'un client		
-	public void setC_adresse_mail(String c_adresse_mail) {
-		this.c_adresse_mail = c_adresse_mail;
+	/**
+	 * @param nom the nom to set
+	 */
+	public final void setNom(String nom) {
+		this.nom = nom;
 	}
 
-//retourne le type d'un client	
-	public String getC_type_client() {
-		return c_type_client;
+	/**
+	 * @param prenom the prenom to set
+	 */
+	public final void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 
-//ajoute le type d'un client	
-	public void setC_type_client(String c_type_client) {
-		this.c_type_client = c_type_client;
+	/**
+	 * @param adresse_mail the adresse_mail to set
+	 */
+	public final void setAdresse_mail(String adresse_mail) {
+		this.adresse_mail = adresse_mail;
+	}
+
+	/**
+	 * @param type_client the type_client to set
+	 */
+	public final void setType_client(String type_client) {
+		this.type_client = type_client;
 	}
 
 
@@ -92,66 +177,5 @@ public class client {
     public void LierOpClient() {
         // TODO implement here
     }
-    
-
-//retourne la liste des clients 	
-    public List<client> recupererclient() {
-		List<client> clients = new ArrayList<client>();
-        Statement statement = null;
-        ResultSet resultat = null;
-           
-//connexion à la base        
-    loadDatabase();
-       
-    	try {
-        	
-            statement = connexion.createStatement();
-
-            // Exécution de la requête
-            resultat = statement.executeQuery("SELECT c_nom, c_prenom,c_adresse_mail,c_type_client FROM CLIENT;");
-
-            // Récupération des données
-            while (resultat.next()) {
-                String nom = resultat.getString("c_nom");
-                String prenom = resultat.getString("c_prenom");
-               
-                
-                client client = new client();
-                client.setC_nom(nom);
-                client.setC_prenom(prenom);
-                
-                clients.add(client);
-            }
-        } catch (SQLException e) {
-        } finally {
-            // Fermeture de la connexion
-            try {
-                if (resultat != null)
-                    resultat.close();
-                if (statement != null)
-                    statement.close();
-                if (connexion != null)
-                    connexion.close();
-            } catch (SQLException ignore) {
-            }
-        }
-        
-        return clients;
-	} 
-    
-    
-    private void loadDatabase() {
-        // Chargement du driver
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-        }
-
-        try {
-            connexion = DriverManager.getConnection("jdbc:mysql://78.119.33.211:3306/C353", "C353", "C353");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }	
-    
+     
 }
