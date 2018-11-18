@@ -15,14 +15,14 @@ public class Interface {
     /**
      * 
      */
-    public void Attendre24h() {
+    public void Attendre24h() { //le client devra attendre 24h pour l'activation de son compte
         // TODO implement here
     }
 
     /**
      * 
      */
-    public void FournirRenseignement() {
+    public void FournirRenseignement() { //saisie du nom, prénom...
         // TODO implement here
     }
 
