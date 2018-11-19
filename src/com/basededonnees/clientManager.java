@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.beans.client;
+import com.beans.Client;
 
 /**
  * @author sutrejz
@@ -23,8 +23,8 @@ public class clientManager {
 	/**
 	 * @return
 	 */
-	public List<client> recupererclient() {
-		List<client> clients = new ArrayList<client>();
+	public List<Client> recupererclient() {
+		List<Client> clients = new ArrayList<Client>();
         Statement statement = null;
         ResultSet resultat = null;
 
@@ -51,7 +51,7 @@ public class clientManager {
                 String prenom = resultat.getString("c_prenom");
                
                 
-                client client = new client();
+                Client client = new Client();
                 client.setNom(nom);
                 client.setPrenom(prenom);
       
