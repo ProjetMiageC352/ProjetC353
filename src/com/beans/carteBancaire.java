@@ -5,7 +5,7 @@ package com.beans;
 /**
  * 
  */
-public class carteBancaire {
+public class CarteBancaire {
 	
 	
 
@@ -37,7 +37,7 @@ public class carteBancaire {
     /**
      * Default constructor
      */
-    public carteBancaire () {
+    public CarteBancaire () {
     }
 
     
