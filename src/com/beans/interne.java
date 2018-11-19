@@ -9,7 +9,7 @@ package com.beans;
  * @author sutrejz
  *
  */
-public class interne extends client {
+public class Interne extends Client {
 
 	/**
 	 * Id interne
@@ -50,7 +50,7 @@ public class interne extends client {
 	/**
      * Default constructor
      */
-    public interne() {
+    public Interne() {
     }
 
 	
