@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 
 
-import com.beans.tiers;
+import com.beans.Tiers;
 
 
 /**
@@ -20,7 +20,7 @@ import com.beans.tiers;
 public class tiersManager {
 	private Connection connexion; 
 	
-	public void creerTiers(tiers Tiers) {
+	public void creerTiers(Tiers Tiers) {
 		
 	/**
 	 * connexion à la base avec la fonction loadDatabase       
