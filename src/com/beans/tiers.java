@@ -5,7 +5,7 @@ package com.beans;
 /**
  * 
  */
-public class tiers extends client {
+public class Tiers extends Client {
 	
 	/**
 	 * Id du tiers
@@ -30,7 +30,7 @@ public class tiers extends client {
 	/**
      * Default constructor
      */
-    public tiers() {
+    public Tiers() {
     	
     }
 
@@ -42,7 +42,7 @@ public class tiers extends client {
      * @param numCompteT
      * @param actifT
      */
-    public tiers(String nom,String prenom,final int numCompteT, final boolean actifT) {
+    public Tiers(String nom,String prenom,final int numCompteT, final boolean actifT) {
     	super(nom,prenom);
     	this.numCompte=numCompteT;
     	this.actif=actifT;
