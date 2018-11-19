@@ -4,7 +4,7 @@ package com.beans;
  * Classe client
  */
 
-public class client {
+public class Client {
 	
 	/**
 	 * Id du client
@@ -35,7 +35,7 @@ public class client {
 	/**
      * Constructeur par défaut de la classe.
      */
-	public client() {
+	public Client() {
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class client {
 	 * @param nomT
 	 * @param prenomT
 	 */
-	public client(String nomT,String prenomT) {
+	public Client(String nomT,String prenomT) {
 		this.nom=nomT;
 		this.prenom=prenomT;
 	}
@@ -62,7 +62,7 @@ public class client {
 	 * @param adresseC
 	 * @param typeC
 	 */
-	public client(final int idC,final String nomC, final String prenomC,final String adresseC, final String typeC) {
+	public Client(final int idC,final String nomC, final String prenomC,final String adresseC, final String typeC) {
 		this.id=idC;
 		this.nom=nomC;
 		this.prenom=prenomC;
