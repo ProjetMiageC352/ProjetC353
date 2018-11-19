@@ -51,7 +51,20 @@ public class Interne extends Client {
      * Default constructor
      */
     public Interne() {
+    	
     }
+    
+    /**
+     * Constructeur de la classe.
+     */
+public Interne(String loginI, String mdp,int annee,int contrat, int portable,boolean agencyI) {
+    	this.login=loginI;
+    	this.mot_de_passe=mdp;
+    	this.annee_arrivee=annee;
+    	this.num_contrat=contrat;
+    	this.num_portable=portable;
+    	this.agency=agencyI;
+}
 
 	
 	
